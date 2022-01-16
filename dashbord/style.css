@@ -1,0 +1,104 @@
+.sidebar {
+    background-color: #FAFFC1;
+}
+
+.ic {
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    background-origin: content-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img-profil {
+    border-radius: 50%;
+}
+
+.ic-home {
+    background-image: url("../img/ic-home.svg");
+}
+
+.ic-course {
+    background-image: url("../img/cources.svg");
+}
+
+.ic-student {
+    background-image: url("../img/student.svg");
+}
+
+.ic-payment {
+    background-image: url("../img/payment.svg");
+}
+
+.ic-report {
+    background-image: url("../img/report.svg");
+}
+
+.ic-setting {
+    background-image: url("../img/setting.svg");
+}
+
+.ic-logout {
+    background-image: url("../img/logout.svg");
+}
+
+ul {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+li {
+    list-style: none;
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100%;
+}
+
+.menu-items {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu-items li a.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .5rem;
+}
+
+.menu-items li a span:nth-child(1) {
+    width: 20%;
+}
+
+.menu-items li a span:nth-child(2) {
+    width: 80%;
+    text-align: start;
+}
+
+.logOut .btn {
+    margin-top: 4rem;
+    flex-direction: row-reverse;
+}
+
+.btn-primary {
+    background-color: #00C1FE !important;
+}
+
+.text-primary {
+    color: #00C1FE !important;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #00C1FE;
+}
+
+.btn:active {
+    color: white;
+    background-color: #00C1FE;
+}
