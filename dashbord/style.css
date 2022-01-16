@@ -42,6 +42,7 @@
 
 .ic-logout {
     background-image: url("../img/logout.svg");
+    margin-bottom: 6px;
 }
 
 ul {
@@ -65,24 +66,28 @@ li {
 }
 
 .menu-items li a.btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     gap: .5rem;
 }
 
-.menu-items li a span:nth-child(1) {
-    width: 20%;
-}
+.menu-items li a span:nth-child(1) {}
 
 .menu-items li a span:nth-child(2) {
-    width: 80%;
     text-align: start;
+    width: 80%;
+    display: none;
 }
 
 .logOut .btn {
     margin-top: 4rem;
     flex-direction: row-reverse;
+}
+
+.logOut .btn>* :nth(2) {
+    width: 50%;
+    background-color: red!important;
 }
 
 .btn-primary {
@@ -101,4 +106,13 @@ li {
 .btn:active {
     color: white;
     background-color: #00C1FE;
+}
+
+@media all and (min-width:992px) {
+    .menu-items li a.btn {
+        justify-content: flex-start;
+    }
+    .menu-items li a span:nth-child(2) {
+        display: block;
+    }
 }
