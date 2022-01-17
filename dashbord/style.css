@@ -86,6 +86,10 @@
     background-image: url('../img/delet.svg');
 }
 
+.ic-showDetails {
+    background-image: url('../img/showDetails.svg');
+}
+
 .cardUsers {
     background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
 }
