@@ -2,6 +2,11 @@
     background-color: #FAFFC1;
 }
 
+.border-primary,
+.btn-primary {
+    border-color: rgba(0, 193, 254, 1) !important;
+}
+
 .ic {
     box-sizing: border-box;
     width: 1rem;
@@ -45,6 +50,58 @@
     margin-bottom: 6px;
 }
 
+.ic-vector {
+    background-image: url("../img/vector.svg");
+}
+
+.ic-notification {
+    background-image: url("../img/notification.svg");
+}
+
+.ic-student2 {
+    background-image: url("../img/Student2.svg");
+}
+
+.ic-course2 {
+    background-image: url("../img/Cources2.svg");
+}
+
+.ic-payment2 {
+    background-image: url("../img/Payment2.svg");
+}
+
+.ic-users2 {
+    background-image: url("../img/user.svg");
+}
+
+.ic-sorte {
+    background-image: url('../img/Sorte.svg');
+}
+
+.ic-edit {
+    background-image: url('../img/edit.svg');
+}
+
+.ic-delete {
+    background-image: url('../img/delet.svg');
+}
+
+.cardUsers {
+    background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+}
+
+.cardPayment {
+    background-color: rgba(254, 251, 236, 1);
+}
+
+.cardCources {
+    background-color: rgba(254, 246, 251, 1);
+}
+
+.cardStudent {
+    background-color: rgba(240, 249, 255, 1);
+}
+
 ul {
     margin: 0px !important;
     padding: 0px !important;
@@ -72,7 +129,9 @@ li {
     gap: .5rem;
 }
 
-.menu-items li a span:nth-child(1) {}
+.menu-items li a span:nth-child(1) {
+    width: 100% !important;
+}
 
 .menu-items li a span:nth-child(2) {
     text-align: start;
@@ -80,14 +139,12 @@ li {
     display: none;
 }
 
-.logOut .btn {
-    margin-top: 4rem;
-    flex-direction: row-reverse;
+.logOut .btn span:nth-child(2) {
+    display: none;
 }
 
 .logOut .btn>* :nth(2) {
     width: 50%;
-    background-color: red!important;
 }
 
 .btn-primary {
@@ -108,11 +165,25 @@ li {
     background-color: #00C1FE;
 }
 
+.table .card {
+    display: table-row;
+}
+
 @media all and (min-width:992px) {
     .menu-items li a.btn {
         justify-content: flex-start;
     }
     .menu-items li a span:nth-child(2) {
+        display: block;
+    }
+    .logOut .btn {
+        margin-top: 4rem;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .logOut .btn span:nth-child(2) {
         display: block;
     }
 }

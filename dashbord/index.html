@@ -14,7 +14,7 @@
 
     <main class="container-fluid">
         <section class="row">
-            <div class="col-2 sidebar d-flex align-items-center flex-column">
+            <div class="col-2 sidebar d-flex align-items-center flex-column vh-100">
                 <h1 class=" mt-3 text-start border-start border-5 border-primary ps-1 align-self-start mb-5 fs-6">E-Classe</h1>
                 <img src="../img/logo.jfif " class="w-50 img-profil" alt="photo profile">
                 <p class="mt-2 mb-0 h6 d-none d-lg-block">Admin name</p>
@@ -22,7 +22,7 @@
                             Admin
                         </span>
                 <nav class="w-75 mx-auto">
-                    <ul class="w-100 mt-5 menu-items">
+                    <ul class="w-100 mt-5 menu-items list-unstyled">
                         <li>
                             <a href="#" class="btn btn-primary w-100 "> <span class="ic ic-home"></span> <span>Home</span> </a>
                         </li>
@@ -41,16 +41,105 @@
                         <li>
                             <a href="# " class="btn    w-100"> <span class=" ic ic-setting "></span><span>Setting</span></a>
                         </li>
-                        <li class="logOut">
-                            <a href="# " class="btn  w-100"> <span class="ic ic-logout"></span><span>Log out</span></a>
+                        <li class="">
                         </li>
 
                     </ul>
+                    <div class="mt-5 logOut">
+                        <a href="# " class="btn ">
+                            <span class="ic ic-logout mt-2 ">
+
+                            </span>
+                            <span class="displayLogout">
+                                Log out
+                            </span>
+                        </a>
+                    </div>
+
+
                 </nav>
+            </div>
+            <div class="col-10 main-content" id="navigationBar">
+                <!--start main content-->
+
+
+                <div class="row navigation-bar">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#"><span class="ic ic-vector"></span></a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                                     <span class="navbar-toggler-icon"></span>
+                              </button>
+                                <div class="collapse navbar-collapse" id="navbarScroll">
+                                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                                    </ul>
+                                    <form class="d-flex">
+                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                        <button class="btn btn-outline-success" type="button"><span class="ic ic-notification"></span></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+
+                </div>
+                <section class="row cards">
+                    <div class="col-3">
+                        <div class="card cardStudent">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <span class="ic ic-student2 w-100"> </span>
+                                <p class="fs-6">students</p>
+                                <h2 class=" align-self-end fs-6">243</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card cardCources">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <span class="ic ic-course2 w-100"> </span>
+                                <p class="fs-6">Cources</p>
+                                <h2 class=" align-self-end fs-6">13</h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card cardPayment">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <span class="ic ic-payment2 w-100"> </span>
+                                <p class="fs-6">payments</p>
+                                <h2 class=" align-self-end fs-6"> 556.000<span class="fs-6">DHs</span> </h2>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card cardUsers">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <span class="ic ic-users2 w-100"> </span>
+                                <p class="fs-6">Users</p>
+                                <h2 class=" align-self-end fs-6">235</h2>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+                <!--end main content-->
+
+
+
 
             </div>
 
+
+
         </section>
+
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin="anonymous "></script>
