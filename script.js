@@ -12,4 +12,3 @@ function OpenPage() {
         alert("wrong XD");
     }
 }
-alert("hiiiiiiiiii");
