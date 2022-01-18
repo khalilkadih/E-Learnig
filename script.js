@@ -1,14 +1,5 @@
-function OpenPage() {
-
-    if (document.getElementById("ToOpenPage").value == "user") {
-        alert("hello e learn");
-
-    } else
-    if (document.getElementById("ToOpenPage").value == "admin") {
-        alert("hello e learn");
-        window.open("../dashbord/index.html");
-    } else {
-
-        alert("wrong XD");
-    }
+document.forms[0].onsubmit = function(e) {
+    e.preventDefault();
+    // window.open("../dashbord/Dashbord.html");
+    window.location.href = "../dashbord/Dashbord.html";
 }
