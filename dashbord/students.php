@@ -14,74 +14,10 @@
 
     <main class="container-fluid">
         <section class="row">
-            <div class="col-2 sidebar d-flex align-items-center flex-column vh-100">
-                <h1 class=" mt-3 text-start border-start border-5 border-primary ps-1 align-self-start mb-5 fs-6">E-Classe</h1>
-                <img src="../img/logo.jfif " class="w-50 img-profil" alt="photo profile">
-                <p class="mt-2 mb-0 h6 d-none d-lg-block">Admin name</p>
-                <span class=" text-primary ">
-                            Admin
-                        </span>
-                <nav class="w-75 mx-auto">
-                    <ul class="w-100 mt-5 menu-items list-unstyled">
-                        <li>
-                            <a href="Dashbord.html" class="btn btn-primary w-100 "> <span class="ic ic-home"></span> <span>Home</span> </a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn  w-100"> <span class="ic ic-course"></span><span>Cources</span></a>
-                        </li>
-                        <li>
-                            <a href="Students.html" class="btn    w-100"> <span class=" ic ic-student "></span><span>Student</span></a>
-                        </li>
-                        <li>
-                            <a href="Payment.html" class="btn    w-100"> <span class=" ic ic-payment "></span><span>Payment</span></a>
-                        </li>
-                        <li>
-                            <a href="# " class="btn    w-100"> <span class=" ic ic-report "></span> <span>Report</span></a>
-                        </li>
-                        <li>
-                            <a href="# " class="btn    w-100"> <span class=" ic ic-setting "></span><span>Setting</span></a>
-                        </li>
-                        <li class="">
-                        </li>
-
-                    </ul>
-                    <div class="mt-5 logOut">
-                        <a href="# " class="btn ">
-                            <span class="ic ic-logout mt-2 ">
-
-                            </span>
-                            <span class="displayLogout">
-                                Log out
-                            </span>
-                        </a>
-                    </div>
-
-
-                </nav>
-            </div>
+        <?php include('sidebar.php');?>
             <div class="col-10 main-content" id="navigationBar">
                 <!--start main content-->
-                <div class="row navigation-bar">
-                    <div class="col">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
-                                <a class="navbar-brand" href="#"><span class="ic ic-vector"></span></a>
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                                     <span class="navbar-toggler-icon"></span>
-                              </button>
-                                <div class="collapse navbar-collapse" id="navbarScroll">
-                                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                                    </ul>
-                                    <form class="d-flex">
-                                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                        <button class="btn btn-outline-success" title="btnnotification" type="button"><span class="ic ic-notification"></span></button>
-                                    </form>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-
-                </div>
+     <?php include('header.php');?>
                 <div class="row">
                     <!-- strat student list -->
 
