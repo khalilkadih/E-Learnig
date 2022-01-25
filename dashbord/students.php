@@ -17,7 +17,7 @@
         <?php include('sidebar.php');?>
             <div class="col-10 main-content" id="navigationBar">
                 <!--start main content-->
-     <?php include('header.php');?>
+        <?php include('header.php');?>
                 <div class="row">
                     <!-- strat student list -->
 
@@ -48,93 +48,36 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                <td>Mark</td>
-                                <td>Otto@gmail.com</td>
-                                <td>06060606</td>
-                                <td>236525412</td>
-                                <td>21/02/22</td>
-                                <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
+
+                      
+                                     <?php
+                                        for($i=0;$i<=8;$i++)
+                                    
+                                              $ListOfStudent[]=array('Name'=>'Mark',
+                                                                        'Email'=>'paulo94kdh@g.com',
+                                                                        'Phone'=>0643434343,
+                                                                        'Enroll_Number'=>34343434343,
+                                                                        'date_admition'=>'05-06-2022'
+                                                        );
+                                                
+
+                                            foreach($ListOfStudent as $element){
+                                            ?>
+
+                                            <tr>
+                                            <th scope="row"><img src="../img/image.svg" alt=""></th>
+                                            <td><?php echo $element['Name'];?></td>
+                                            <td><?php echo $element['Email'];?></td>
+                                            <td><?php echo $element['Phone'];?></td>
+                                            <td><?php echo $element['Enroll_Number'];?></td>
+                                            <td><?php echo $element['date_admition'];?></td>
+                                            <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
 
 
-                            </tr>
-                            <tr>
-                                <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                <td>Mark</td>
-                                <td>Otto@gmail.com</td>
-                                <td>06060606</td>
-                                <td>236525412</td>
-                                <td>21/02/22</td>
-                                <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                <td>Mark</td>
-                                <td>Otto@gmail.com</td>
-                                <td>06060606</td>
-                                <td>236525412</td>
-                                <td>@21/02/22</td>
-                                <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-                            </tr>
-
-                            <tr>
-                                <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                <td>Mark</td>
-                                <td>Otto@gmail.com</td>
-                                <td>06060606</td>
-                                <td>236525412</td>
-                                <td>21/02/22</td>
-                                <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-
-                                <tr>
-                                    <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                    <td>Mark</td>
-                                    <td>Otto@gmail.com</td>
-                                    <td>06060606</td>
-                                    <td>236525412</td>
-                                    <td>21/02/22</td>
-                                    <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-                                </tr>
-
-                                <tr>
-                                    <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                    <td>Mark</td>
-                                    <td>Otto@gmail.com</td>
-                                    <td>06060606</td>
-                                    <td>236525412</td>
-                                    <td>21/02/22</td>
-                                    <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                    <td>Mark</td>
-                                    <td>Otto@gmail.com</td>
-                                    <td>06060606</td>
-                                    <td>236525412</td>
-                                    <td>21/02/22</td>
-                                    <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                    <td>Mark</td>
-                                    <td>Otto@gmail.com</td>
-                                    <td>06060606</td>
-                                    <td>236525412</td>
-                                    <td>21/02/22</td>
-                                    <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-                                </tr>
-
-
-
-                        </tbody>
+                                            </tr>
+                                        <?php }?>
+                         </tbody>
+                       
                     </table>
                 </div>
 

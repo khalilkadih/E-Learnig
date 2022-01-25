@@ -14,14 +14,10 @@
 
     <main class="container-fluid">
         <section class="row">
-<<<<<<< HEAD
 
           <?php include('sidebar.php');?>
 
           
-=======
-          <?php include('sidebar.php');?>
->>>>>>> 17f0d9d8656d20c760ad7020d1bb9a593d252488
             <div class="col-10 main-content" id="navigationBar">
                 <!--start main content-->
 

@@ -19,7 +19,7 @@
                         <h1 class="text-start border-start border-5 border-primary ps-1 ">E-Classe</h1>
                         <h2 class="h3 text-center text-uppercase mb-3 ">Sign in </h2>
                         <p class="text-center "> Enter your credentials to access your account </p>
-                        <form>
+                        <form method="POST" action="../LearningPlatform/dashbord/dashboard.php">
                             <div class="mb-3 ">
                                 <label for="ToOpenPage" class="form-label">Email:</label>
                                 <input type="Email" class="form-control " placeholder="Enter your Email" id="ToOpenPage">

@@ -51,78 +51,36 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">karthi</th>
-                            <td>first</td>
-                            <td>00012345</td>
-                            <td>DHS1000</td>
-                            <td>DHS 500.000</td>
-                            <td>05-jan-2022</td>
-                            <td><span class="ic ic-showDetails"></span> </td>
-                        </tr>
+                       <?php
+                                        for($i=0;$i<=7;$i++)
+                                    
+                                              $ListOfStudent[]=array('Name'=>'Mark',
+                                                                        'Payment_schedule'=>'paulo94kdh@g.com',
+                                                                        'Bill_Number'=>0643434343,
+                                                                        'Amount_paid'=>'DHS 1500',
+                                                                        'balance_account'=>'DHS 500.00',
+                                                                        'Date'=>'05-06-2022'
+                                                        );
+                                                
+
+                                            foreach($ListOfStudent as $element){
+                                            ?>
+
+                                            <tr>
+                                            <th scope="row"><img src="../img/image.svg" alt=""></th>
+                                            <td><?php echo $element['Name'];?></td>
+                                            <td><?php echo $element['Payment_schedule'];?></td>
+                                            <td><?php echo $element['Bill_Number'];?></td>
+                                            <td><?php echo $element['Amount_paid'];?></td>
+                                            <td><?php echo $element['balance_account'];?></td>
+                                            <td><?php echo $element['Date'];?></td>
+
+                                            <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
+
+
+                                            </tr>
+                                        <?php }?>
+                                    
                     </tbody>
                 </table>
                 <!--start page paiment-->
