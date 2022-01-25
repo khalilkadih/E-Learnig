@@ -32,8 +32,8 @@
                         <div class="card cardStudent">
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-student2 w-100"> </span>
-                                <p class="fs-6">students</p>
-                                <h2 class=" align-self-end fs-6">243</h2>
+                                <p class="fs-6 fw-bold">students</p>
+                                <h2 class=" align-self-end fs-6 fw-bold">243</h2>
 
                             </div>
                         </div>
@@ -42,8 +42,8 @@
                         <div class="card cardCources">
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-course2 w-100"> </span>
-                                <p class="fs-6">Cources</p>
-                                <h2 class=" align-self-end fs-6">13</h2>
+                                <p class="fs-6 fw-bold">Cources</p>
+                                <h2 class=" align-self-end fs-6 fw-bold">13</h2>
 
                             </div>
                         </div>
@@ -52,8 +52,8 @@
                         <div class="card cardPayment">
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-payment2 w-100"> </span>
-                                <p class="fs-6">payments</p>
-                                <h2 class=" align-self-end fs-6"> 556.000<span class="fs-6">DHs</span> </h2>
+                                <p class="fs-6 fw-bold">payments</p>
+                                <h2 class=" align-self-end fs-6 fw-bold"> 556.000<span class="fs-6">DHs</span> </h2>
 
                             </div>
                         </div>
@@ -62,8 +62,8 @@
                         <div class="card cardUsers">
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-users2 w-100"> </span>
-                                <p class="fs-6">Users</p>
-                                <h2 class=" align-self-end fs-6">235</h2>
+                                <p class="fs-6 fw-bold">Users</p>
+                                <h2 class=" align-self-end fs-6 fw-bold">235</h2>
 
                             </div>
                         </div>

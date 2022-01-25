@@ -191,4 +191,11 @@ li {
     .logOut .btn span:nth-child(2) {
         display: block;
     }
+    #changeTailleOfH1 {
+        font-size: 40px !important;
+    }
+}
+
+body {
+    background-color: #E5E5E5;
 }

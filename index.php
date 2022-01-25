@@ -16,8 +16,8 @@
             <div class="col-12 col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 mt-5 pt-5">
                 <div class="card shadow ">
                     <div class="card-body p-5 ">
-                        <h1 class="text-start border-start border-5 border-primary ps-1 ">E-Classe</h1>
-                        <h2 class="h3 text-center text-uppercase mb-3 ">Sign in </h2>
+                        <h1 class="text-start border-start border-5 border-primary ps-1 fw-bold">E-Classe</h1>
+                        <h2 class="h3 text-center text-uppercase mb-3 fw-bold">Sign in </h2>
                         <p class="text-center "> Enter your credentials to access your account </p>
                         <form method="POST" action="../LearningPlatform/dashbord/dashboard.php">
                             <div class="mb-3 ">
@@ -30,7 +30,7 @@
                                 <input type="password" placeholder="Enter your Password" class="form-control" id="PasswortInput">
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100 ">SIGN IN</button>
+                            <button type="submit" class="btn btn-primary w-100 fw-bold">SIGN IN</button>
                         </form>
                     </div>
                     <span class="text-center mb-5 mt-.5 ">forget your password ? <a href="# ">Reset password</a></span>

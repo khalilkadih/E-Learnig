@@ -35,13 +35,13 @@
                 <div class="row">
                     <table class="table">
                         <thead class="">
-                            <tr class="card">
+                            <tr class="card" style="background-color: #E5E5E5 !important;">
                                 <th scope="col"></th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Phone</th>
-                                <th scope="col">Enroll Number</th>
-                                <th scope="col">Date d'admision</th>
+                                <th scope="col" class="fw-light">Name</th>
+                                <th scope="col" class="fw-light text-center">Email</th>
+                                <th scope="col"class="fw-light">Phone</th>
+                                <th scope="col" class="fw-light">Enroll Number</th>
+                                <th scope="col" class="fw-light">Date d'admision</th>
                                 <th scope="col"></th>
 
 

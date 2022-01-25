@@ -1,7 +1,7 @@
 <div class="row navigation-bar">
-                    <div class="col">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                            <div class="container-fluid">
+                    <div class="col" >
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="container-fluid" >
                                 <a class="navbar-brand" title="NavbarBrand" href="#"><span class="ic ic-vector"></span></a>
                                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                                      <span class="navbar-toggler-icon"></span>
