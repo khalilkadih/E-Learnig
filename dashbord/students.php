@@ -1,3 +1,8 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,10 +53,17 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <h1 color='red'>
+                                <?php 
+                                    $students=json_decode(file_get_contents('student.json'),true);
+                                    //print_r($students);
+                            ?>
+                            </h1>
 
                       
                                      <?php
-                                        for($i=0;$i<=8;$i++)
+                                        
+                                      /*  for($i=0;$i<=2;$i++)
                                     
                                               $ListOfStudent[]=array('Name'=>'Mark',
                                                                         'Email'=>'paulo94kdh@g.com',
@@ -59,18 +71,23 @@
                                                                         'Enroll_Number'=>34343434343,
                                                                         'date_admition'=>'05-06-2022'
                                                         );
-                                                
+                                                */
 
-                                            foreach($ListOfStudent as $element){
+                                            for($i=0;$i<count($students);$i++){
+                                                         $element=$students[$i];
+                                            
+                                                
                                             ?>
+
+                                        
 
                                             <tr>
                                             <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                            <td><?php echo $element['Name'];?></td>
-                                            <td><?php echo $element['Email'];?></td>
-                                            <td><?php echo $element['Phone'];?></td>
+                                            <td><?php echo $students[$i]['name'];?></td> 
+                                            <td><?php echo $element['email'];?></td>
+                                            <td><?php echo $element['phone'];?></td>
                                             <td><?php echo $element['Enroll_Number'];?></td>
-                                            <td><?php echo $element['date_admition'];?></td>
+                                            <td><?php echo $element['Date_Admission'];?></td>
                                             <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
 
 

@@ -52,18 +52,19 @@
                     </thead>
                     <tbody>
                        <?php
-                                        for($i=0;$i<=7;$i++)
+                       $payments=json_decode(file_get_contents('payments.json'),true);
+                                        // for($i=0;$i<=7;$i++)
                                     
-                                              $ListOfStudent[]=array('Name'=>'Mark',
-                                                                        'Payment_schedule'=>'paulo94kdh@g.com',
-                                                                        'Bill_Number'=>0643434343,
-                                                                        'Amount_paid'=>'DHS 1500',
-                                                                        'balance_account'=>'DHS 500.00',
-                                                                        'Date'=>'05-06-2022'
-                                                        );
+                                        //       $ListOfStudent[]=array('Name'=>'Mark',
+                                        //                                 'Payment_schedule'=>'paulo94kdh@g.com',
+                                        //                                 'Bill_Number'=>0643434343,
+                                        //                                 'Amount_paid'=>'DHS 1500',
+                                        //                                 'balance_account'=>'DHS 500.00',
+                                        //                                 'Date'=>'05-06-2022'
+                                        //                 );
                                                 
 
-                                            foreach($ListOfStudent as $element){
+                                            foreach($payments as $element){
                                             ?>
 
                                             <tr>
