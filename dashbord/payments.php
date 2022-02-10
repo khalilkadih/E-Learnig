@@ -47,7 +47,6 @@
                             <th scope="col">balance account</th>
                             <th scope="col">Date</th>
                             <th>_</th>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -68,17 +67,13 @@
                                             ?>
 
                                             <tr>
-                                            <th scope="row"><img src="../img/image.svg" alt=""></th>
                                             <td><?php echo $element['Name'];?></td>
                                             <td><?php echo $element['Payment_schedule'];?></td>
                                             <td><?php echo $element['Bill_Number'];?></td>
                                             <td><?php echo $element['Amount_paid'];?></td>
                                             <td><?php echo $element['balance_account'];?></td>
                                             <td><?php echo $element['Date'];?></td>
-
-                                            <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-
+                                            <td><span class="ic ic-edit m-2"><a href=""></a></td>
                                             </tr>
                                         <?php }?>
                                     
