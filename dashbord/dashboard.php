@@ -16,6 +16,38 @@
         <section class="row">
 
           <?php include('sidebar.php');?>
+        <?php  try{
+            $mysqlConnection = new PDO(
+                'mysql:host=localhost;dbname=e_classe_db;charset=utf8',
+                'root',
+                ''
+            );
+        }catch (Exception $e){die ('erreur : '.$e->getMessage());}
+
+        $sqlQuery='SELECT COUNT(*) FROM students';
+        $StudentStatment=$mysqlConnection->prepare($sqlQuery);
+
+        $StudentStatment->execute();
+        $resultas=$StudentStatment->fetchColumn();
+       
+//cours
+            $sqlQuery='SELECT COUNT(*) FROM courses';
+                    $coursesStatment=$mysqlConnection->prepare($sqlQuery);
+
+                    $coursesStatment->execute();
+                    $_resultas=$coursesStatment->fetchColumn();   
+                    
+                    
+ //sum of payment amount
+                    $sqlQuery=' SELECT SUM(Balance_Amount)  FROM payments_details;';
+                    $BalanceStatment=$mysqlConnection->prepare($sqlQuery);
+
+                    $BalanceStatment->execute();
+                    $__resultas=$BalanceStatment->fetchColumn();   
+ 
+        ?>
+
+
 
           
             <div class="col-10 main-content" id="navigationBar">
@@ -33,7 +65,7 @@
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-student2 w-100"> </span>
                                 <p class="fs-6 fw-bold">students</p>
-                                <h2 class=" align-self-end fs-6 fw-bold">243</h2>
+                                <h2 class=" align-self-end fs-6 fw-bold"> <?php echo $resultas;?></h2>
 
                             </div>
                         </div>
@@ -43,7 +75,7 @@
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-course2 w-100"> </span>
                                 <p class="fs-6 fw-bold">Cources</p>
-                                <h2 class=" align-self-end fs-6 fw-bold">13</h2>
+                                <h2 class=" align-self-end fs-6 fw-bold"><?php echo $_resultas;?></h2>
 
                             </div>
                         </div>
@@ -53,7 +85,7 @@
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-payment2 w-100"> </span>
                                 <p class="fs-6 fw-bold">payments</p>
-                                <h2 class=" align-self-end fs-6 fw-bold"> 556.000<span class="fs-6">DHs</span> </h2>
+                                <h2 class=" align-self-end fs-6 fw-bold"> <?php echo $__resultas;?><span class="fs-6"> DHs</span> </h2>
 
                             </div>
                         </div>

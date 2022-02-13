@@ -22,7 +22,7 @@
                             <a href="dashboard.php" class="btn <?php highlightIfACtive('dashboard.php')?> w-100 active"> <span class="ic ic-home"></span> <span>Home</span> </a>
                         </li>
                         <li>
-                            <a href="#" class="btn  w-100"> <span class="ic ic-course" ></span><span>Courses</span></a>
+                            <a href="courses.php" class="btn  w-100"> <span class="ic ic-course"  <?php highlightIfACtive('students.php')?>></span><span>Courses</span></a>
                         </li>
                         <li>
                             <a href="students.php" class="btn  <?php highlightIfACtive('students.php')?>  w-100"> <span class=" ic ic-student "></span><span>Student</span></a>
