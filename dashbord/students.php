@@ -2,7 +2,26 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+
+try{
+    $mysqlConnection = new PDO(
+        'mysql:host=localhost;dbname=e_classe_db;charset=utf8',
+        'root',
+        ''
+    );
+}catch (Exception $e){die ('erreur : '.$e->getMessage());}
+
+$sqlQuery='SELECT * FROM students';
+$studentStatement=$mysqlConnection->prepare($sqlQuery);
+$studentStatement->execute();
+$student=$studentStatement->fetchAll();
+
+
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +33,7 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="style.css">
     <title>E-Learnig</title>
 </head>
-
 <body>
-
     <main class="container-fluid">
         <section class="row">
         <?php include('sidebar.php');?>
@@ -25,71 +42,83 @@ error_reporting(E_ALL);
         <?php include('header.php');?>
                 <div class="row">
                     <!-- strat student list -->
-
                     <nav class="navbar navbar-light bg-light">
                         <div class="container-fluid">
                             <a class="navbar-brand" title="navbarBrand">Student List </a>
                             <form class="d-flex">
-                                <a href=""><span class=" ic ic-sorte mt-2"></span></a>
-                                <button class="btn  btn btn-primary  badge bg-primary text-wrap ml-2" type="button">Add new student</button>
+                               <span class=" ic ic-sorte mt-2"></span>
+                                <a href="AddUserForm.php" class="btn  btn btn-primary  badge bg-primary text-wrap ml-2" >Add new student</a>
                             </form>
                         </div>
                     </nav>
                     <!-- end  student list -->
                 </div>
                 <div class="row">
+                    <?php if(isset($_GET['updateSuccess'])){?>
+                            <div class="alert alert-success">
+                                student updated successfully!
+                            </div>
+                        <?php }?>
+                        <?php if(isset($_GET['DeletedSuccess'])){?>
+                            <div class="alert alert-success">
+                                Student Deleted successfully!
+                            </div>
+                        <?php }?>
+                    
                     <table class="table">
                         <thead class="">
                             <tr class="card" style="background-color: #E5E5E5 !important;">
-                                <th scope="col"></th>
+                                <th scope="col">image</th>
                                 <th scope="col" class="fw-light">Name</th>
-                                <th scope="col" class="fw-light text-center">Email</th>
+                                <th scope="col" class="fw-light ">Email</th>
                                 <th scope="col"class="fw-light">Phone</th>
                                 <th scope="col" class="fw-light">Enroll Number</th>
                                 <th scope="col" class="fw-light">Date d'admision</th>
-                                <th scope="col"></th>
-
-
+                                <th scope="col">---------</th>
                             </tr>
                         </thead>
                         <tbody>
                             <h1 color='red'>
-                                <?php 
-                                    $students=json_decode(file_get_contents('student.json'),true);
-                                    //print_r($students);
-                            ?>
+
+                                      <!--/* //get data from file json 
+                                      // $students=json_decode(file_get_contents('student.json'),true);
+                                      //print_r($students); */ -->
                             </h1>
 
                       
-                                     <?php
-                                        
+                                    <?php
+
                                       /*  for($i=0;$i<=2;$i++)
-                                    
                                               $ListOfStudent[]=array('Name'=>'Mark',
                                                                         'Email'=>'paulo94kdh@g.com',
                                                                         'Phone'=>0643434343,
                                                                         'Enroll_Number'=>34343434343,
                                                                         'date_admition'=>'05-06-2022'
                                                         );
-                                                */
-
-                                            for($i=0;$i<count($students);$i++){
-                                                         $element=$students[$i];
-                                            
+                                                */  
+                                            // for($i=0;$i<count($students);$i++){
+                                            //              $element=$students[$i];
+                                            foreach($student as $__students){
                                                 
-                                            ?>
+                                    ?>
 
                                         
 
                                             <tr>
-                                            <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                            <td><?php echo $students[$i]['name'];?></td> 
-                                            <td><?php echo $element['email'];?></td>
-                                            <td><?php echo $element['phone'];?></td>
-                                            <td><?php echo $element['Enroll_Number'];?></td>
-                                            <td><?php echo $element['Date_Admission'];?></td>
-                                            <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
+                                            <th scope="row"><img src="../img/user.svg" alt=""></th>
+                                            <td><?=$__students['Name']?></td>
+                                            <td><?php echo $__students['Email'];?></td>
+                                            <td><?php echo $__students['phone'];?></td> 
+                                            <td><?php echo $__students['Enroll_Number'];?></td>
+                                            <td><?php echo $__students['Date_Admition'];?></td>
+                                            <td>
+                                                <a href="UpdateStudent.php?id=<?=$__students['id_Students']?>">
+                                                    <span class="ic ic-edit m-2"></span>
+                                                </a>
+                                                <a href="DeletStudent.php?id=<?=$__students['id_Students']?>">
+                                                    <span class="m-2 ic ic-delete"></span>
+                                                </a>
+                                            </td>
 
                                             </tr>
                                         <?php }?>

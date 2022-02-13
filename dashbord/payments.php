@@ -1,3 +1,25 @@
+<?php
+// Souvent on identifie cet objet par la variable $conn ou $db
+try{
+    $mysqlConnection = new PDO(
+        'mysql:host=localhost;dbname=e_classe_db;charset=utf8',
+        'root',
+        ''
+    );
+}catch (Exception $e){die ('erreur : '.$e->getMessage());}
+
+$sqlQuery='SELECT * FROM payments_details';
+$paymentStatement=$mysqlConnection->prepare($sqlQuery);
+$paymentStatement->execute();
+$payments=$paymentStatement->fetchAll();
+
+
+
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,12 +69,11 @@
                             <th scope="col">balance account</th>
                             <th scope="col">Date</th>
                             <th>_</th>
-
                         </tr>
                     </thead>
                     <tbody>
                        <?php
-                       $payments=json_decode(file_get_contents('payments.json'),true);
+                                         //    $payments=json_decode(file_get_contents('payments.json'),true);
                                         // for($i=0;$i<=7;$i++)
                                     
                                         //       $ListOfStudent[]=array('Name'=>'Mark',
@@ -68,17 +89,13 @@
                                             ?>
 
                                             <tr>
-                                            <th scope="row"><img src="../img/image.svg" alt=""></th>
-                                            <td><?php echo $element['Name'];?></td>
-                                            <td><?php echo $element['Payment_schedule'];?></td>
+                                            <td><?php echo $element['Name_students'];?></td>
+                                            <td><?php echo $element['payment_shedule'];?></td>
                                             <td><?php echo $element['Bill_Number'];?></td>
-                                            <td><?php echo $element['Amount_paid'];?></td>
-                                            <td><?php echo $element['balance_account'];?></td>
-                                            <td><?php echo $element['Date'];?></td>
-
-                                            <td><span class="ic ic-edit m-2"><a href=""></a></span><span class=" m-2 ic ic-delete"><a href=""></a></span></td>
-
-
+                                            <td><?php echo $element['Amound_Paid'];?></td>
+                                            <td><?php echo $element['Balance_Amount'];?></td>
+                                            <td><?php echo $element['date'];?></td>
+                                            <td><span class="ic ic-edit m-2"><a href=""></a></td>
                                             </tr>
                                         <?php }?>
                                     
