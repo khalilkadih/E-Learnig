@@ -95,6 +95,7 @@ error_reporting(E_ALL);
                                             <td><?php echo $element['Amound_Paid'];?></td>
                                             <td><?php echo $element['Balance_Amount'];?></td>
                                             <td><?php echo $element['date'];?></td>
+
                                             <td><span class="ic ic-edit m-2"><a href=""></a></td>
                                             </tr>
                                         <?php }?>

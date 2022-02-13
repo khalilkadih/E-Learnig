@@ -21,7 +21,6 @@ $student=$studentStatement->fetchAll();
 
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
