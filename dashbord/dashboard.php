@@ -45,6 +45,12 @@
                     $BalanceStatment->execute();
                     $__resultas=$BalanceStatment->fetchColumn();   
  
+                    //users
+
+                    $sqlQuery='SELECT COUNT(*) FROM compte';
+                    $CompteStatement=$mysqlConnection->prepare($sqlQuery);
+                    $CompteStatement->execute();
+                    $users=$CompteStatement->fetchColumn();
         ?>
 
 
@@ -58,7 +64,11 @@
                 <!--end Navigation barre and search input-->
 
                 <!--Start card Content -->
-
+                <?php if(isset($_GET['Welcome'])){?>
+                            <div class="alert alert-success">
+                                 Welcome to dashbord!
+                            </div>
+                        <?php }?>
                 <section class="row cards">
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card cardStudent">
@@ -95,7 +105,8 @@
                             <div class="card-body d-flex flex-column align-items-start">
                                 <span class="ic ic-users2 w-100"> </span>
                                 <p class="fs-6 fw-bold">Users</p>
-                                <h2 class=" align-self-end fs-6 fw-bold">235</h2>
+                                <h2 class=" align-self-end fs-6 fw-bold"><?php echo $users; ?></h2>
+                               
 
                             </div>
                         </div>
