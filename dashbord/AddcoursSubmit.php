@@ -1,5 +1,7 @@
 <?php 
 require 'connection.php';
+try{
+
   $NameCours=$_POST['name_course'];
   $HeursCours=$_POST['Heures_cours'];
   $dateDebut=$_POST['date_debut'];
@@ -13,7 +15,12 @@ require 'connection.php';
     'date_debut'=>$dateDebut,
     'date_fin'=>$dateFin
   ]);
+  header('location:courses.php?coursesadded');
+  
 
-  echo 'Ok data ajouter avec success ';
+}catch(PDOException $e){
+var_dump($e);
+die('Error'.$e->getMessage());}
+  
 
 ?>

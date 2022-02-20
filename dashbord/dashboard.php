@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,10 +66,12 @@
 
                 <!--Start card Content -->
                 <?php if(isset($_GET['Welcome'])){?>
+                    
                             <div class="alert alert-success">
                                  Welcome to dashbord!
                             </div>
                         <?php }?>
+         
                 <section class="row cards">
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="card cardStudent">
@@ -106,8 +109,6 @@
                                 <span class="ic ic-users2 w-100"> </span>
                                 <p class="fs-6 fw-bold">Users</p>
                                 <h2 class=" align-self-end fs-6 fw-bold"><?php echo $users; ?></h2>
-                               
-
                             </div>
                         </div>
                     </div>

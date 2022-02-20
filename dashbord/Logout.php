@@ -1,0 +1,10 @@
+<?php
+   session_start();
+   $loggedUser=$_SESSION['loggedUser'];
+   session_destroy();
+   print_r($loggedUser);
+   unset($loggedUser['First_Name']);
+    unset($loggedUser['email']);
+    print_r($loggedUser);
+   header("location:../index.php");
+?>

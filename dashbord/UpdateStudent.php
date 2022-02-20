@@ -1,30 +1,32 @@
     <?php
     require 'connection.php';
     //if coming in form student (la liste des students),
-    if($_SERVER['REQUEST_METHOD']=='GET'){
-        $students=$mysqlConnection->prepare('select  * from students');
-        $students->execute();
-        $_student=$students->fetch();
+    if($_SERVER['REQUEST_METHOD']=='GET')
+    {
+        // $students=$mysqlConnection->prepare('select  * from students');
+        // $students->execute();
+        // $_student=$students->fetch();
 
 
-        if(!isset($_GET['id']) OR !is_numeric($_GET['id']) || $_GET['id']!=$_student['id_Students']){
+        if(!isset($_GET['id']) OR !is_numeric($_GET['id']) )
+        {
             echo("il faut que un identifiant pour le modifier ou  la valeur de id n'exist pas dans la db");
             return;
         }
 
 
 
-        $reciveStudent=$mysqlConnection->prepare('SELECT * FROM students where id_Students=:id');
-        $reciveStudent->execute(
+            $reciveStudent=$mysqlConnection->prepare('SELECT * FROM students where id_Students=:id');
+            $reciveStudent->execute(
             [
                 'id'=>$_GET['id'],
 
             ]
 
             );
-        $_student=$reciveStudent->fetch(PDO::FETCH_ASSOC);
+           $_student=$reciveStudent->fetch(PDO::FETCH_ASSOC);
 
-    }else{
+        }else{
         // save changes
         print_r($_POST);
         try{
