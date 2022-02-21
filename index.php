@@ -32,11 +32,28 @@
                             'First_Name'=>$user['First_Name']
                             
                         ];
+                        
+
+                       
+                        // setcookie($cockieName,$cookie_value,time() + (86400 * 30));
+                        
+                     
                         header('location:../E-LEARNING/dashbord/dashboard.php?Welcome');
                         $_SESSION['loggedUser']=$loggedUser;
+
+                        $_SESSION['time']= time();
+                        
+                        if(isset($_POST['remember_me'])){
+                            setCookie('email',$_POST['email'],time()+6*30*24*60*60);
+                            setCookie('password',$_POST['password'],time()+6*30*24*60*60);
+                        }else{
+                            setCookie('email','',time()-10);
+                            setCookie('password','',time()-10);
+                        }
                     }
                     else {
-                        $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier' );
+
+                        $errorMessage = 'Les informations envoyées ne permettent pas de vous identifier';
                     }
                 }
                 
@@ -77,14 +94,21 @@
                                         <?php echo $errorMessage;?>
                                     </div>
                                 <?php endif;?>    
-                                    <div class="mb-3 ">
+                                    <div class="mb-3 form-group">
                                         <label for="email" class="form-label">Email:</label>
-                                        <input type="Email" class="form-control" name="email" placeholder="Enter your Email" id="ToOpenPage" required>
+                                        <input type="Email" class="form-control" name="email" placeholder="Enter your Email"  value="<?= $_COOKIE['email'] ??''?>" id="ToOpenPage" required>
 
                                     </div>
-                                    <div class="mb-3">
+                                    
+                                    <div class="mb-3 form-group">
                                         <label for="PasswortInput" class="form-label mt-1">Password :</label>
-                                        <input type="password" name="password" placeholder="Enter your Password" class="form-control" required id="PasswortInput">
+                                        <input type="password" name="password" value='<?= $_COOKIE['password'] ?? '' ?>' placeholder="Enter your Password" class="form-control" required id="PasswortInput">
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" name='remember_me'type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Remember me
+                                        </label>
                                     </div>
 
                                     <button type="submit" name="submit"class="btn btn-primary w-100 fw-bold">SIGN IN</button>

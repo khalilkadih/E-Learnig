@@ -23,11 +23,11 @@ if($_SERVER['REQUEST_METHOD']=='GET'){
 
         );
     $_courses=$recivecourses->fetch(PDO::FETCH_ASSOC);
-    print_r($_courses);
+    // print_r($_courses);
 
 }else{
     // save changes
-    print_r($_POST);
+    // print_r($_POST);
     try{
             $statment=$mysqlConnection->prepare("UPDATE courses  SET 
             name_course = :name_course, Heures_cours =:Heures_cours, date_debut = :date_debut,

@@ -1,4 +1,12 @@
-
+<?php 
+session_start();
+$timenow= Time();
+if($timenow-$_SESSION['time']>90){
+session_destroy();
+header('location:../index.php');
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
