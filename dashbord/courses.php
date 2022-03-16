@@ -42,7 +42,7 @@
                             <!--start main content-->
 
 
-                    <?php include('header.php');?>
+                    <?php require_once('header.php');?>
 
                             <!-- strat student list -->
 

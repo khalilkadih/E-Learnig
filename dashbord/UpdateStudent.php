@@ -1,5 +1,5 @@
     <?php
-    require 'connection.php';
+    require_once 'connection.php';
     //if coming in form student (la liste des students),
     if($_SERVER['REQUEST_METHOD']=='GET')
     {

@@ -1,22 +1,26 @@
-<?php 
-    session_start();
-        $active='btn-primary';
-        $page= basename($_SERVER['SCRIPT_FILENAME']);
-    function highlightIfACtive($p){
-        global $page,$active;
-        if($p==$page)
-        echo $active;
-    }
+    <?php 
+              if(!isset($_SESSION)) { 
+                session_start(); 
+              } 
+            
+            $active='btn-primary';
+            $page= basename($_SERVER['SCRIPT_FILENAME']);
+            function highlightIfACtive($p)
+            {
+            global $page,$active;
+            if($p==$page)
+            echo $active;
+            }
 
-    
+        
 
-    if(isset($_SESSION['loggedUser'])){
-        // echo '<div class="alert alert-success">course added succesffully  </div>';
-        $loggedUser=$_SESSION['loggedUser'];
-       
-    }
-  ?>
-  <div class="col-2 sidebar d-flex align-items-center flex-column vh-100">
+        if(isset($_SESSION['loggedUser'])){
+            // echo '<div class="alert alert-success">course added succesffully  </div>';
+            $loggedUser=$_SESSION['loggedUser'];
+        
+        }
+    ?>
+                <div class="col-2 sidebar d-flex align-items-center flex-column vh-100">
                 <h1 class=" mt-3 text-start border-start border-5 border-primary ps-1 align-self-start mb-5 fs-6 fw-bold" id="changeTailleOfH1">E-Classe</h1>
                 <img src="../img/logo.jfif " class="w-50 img-profil" alt="photo profile">
                 <p class="mt-2 mb-0 h6 d-none d-lg-block fw-bold"> <?php print_r($loggedUser['email']);?></p>

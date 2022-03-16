@@ -1,5 +1,5 @@
 <?php
-require 'connection.php';
+require_once 'connection.php';
 if(!isset($_GET['id']) OR !is_numeric($_GET['id'])){
     echo("il faut que un identifiant pour le supprimer");
     return;

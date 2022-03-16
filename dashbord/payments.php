@@ -36,12 +36,12 @@ error_reporting(E_ALL);
 
     <main class="container-fluid">
         <section class="row">
-             <?php include('sidebar.php');?>
+             <?php require_once('sidebar.php');?>
             <div class="col-10 main-content" id="navigationBar">
                 <!--start main content-->
 
 
-         <?php include('header.php');?>
+         <?php require_once('header.php');?>
 
                 <!-- strat student list -->
 

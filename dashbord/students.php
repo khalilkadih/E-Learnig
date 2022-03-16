@@ -29,10 +29,10 @@
         <body>
             <main class="container-fluid">
                 <section class="row">
-                <?php include('sidebar.php');?>
+                <?php require_once('sidebar.php');?>
                     <div class="col-10 main-content" id="navigationBar">
                         <!--start main content-->
-                <?php include('header.php');?>
+                <?php require_once('header.php');?>
                         <div class="row">
                             <!-- strat student list -->
                             <nav class="navbar navbar-light bg-light">

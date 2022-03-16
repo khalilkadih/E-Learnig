@@ -1,5 +1,9 @@
 <?php 
-session_start();
+   if(!isset($_SESSION)) { 
+    session_start(); 
+  } 
+
+
 $timenow= Time();
 if($timenow-$_SESSION['time']>90){
 session_destroy();
@@ -20,11 +24,10 @@ header('location:../index.php');
 </head>
 
 <body>
-
     <main class="container-fluid">
         <section class="row">
 
-          <?php include('sidebar.php');?>
+          <?php require_once('sidebar.php');?>
         <?php  try{
             $mysqlConnection = new PDO(
                 'mysql:host=localhost;dbname=e_classe_db;charset=utf8',

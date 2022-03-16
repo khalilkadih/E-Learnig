@@ -1,5 +1,5 @@
 <?php 
-require 'connection.php';
+require_once 'connection.php';
 
  // Testons si le fichier a bien été envoyé et s'il n'y a pas d'erreur
 // if (isset($_FILES['screenshot']) && $_FILES['screenshot']['error'] == 0)

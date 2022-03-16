@@ -24,7 +24,7 @@
                 foreach ($users as $user) {
                     if (
                         $user['Email'] === $_POST['email'] &&
-                        $user['Password'] === $_POST['password']
+                        $user['passwoedUser'] === $_POST['password']
                     ) {
                     
                         $loggedUser = [
@@ -84,16 +84,21 @@
                             <div class="card-body p-5 ">
                                 <h1 class="text-start border-start border-5 border-primary ps-1 fw-bold">E-Classe</h1>
                                 <h2 class="h3 text-center text-uppercase mb-3 fw-bold">Sign in </h2>
+                                <?php if(isset($_GET['SignUpSuccess'])){?>
+                                <div class="alert alert-success">
+                                your sign up Successfuly !!! sign in Now
+                                </div>
+                                <?php }?>
                                 <p class="text-center "> Enter your credentials to access your account </p>
                                 
                                 <?php if(!isset($loggedUser)): ?>
 
                                 <form method="POST" action="">
-                                <?php if(isset($errorMessage)): ?>
-                                    <div class="alert alert-danger" role="alert">
-                                        <?php echo $errorMessage;?>
-                                    </div>
-                                <?php endif;?>    
+                                    <?php if(isset($errorMessage)): ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <?php echo $errorMessage;?>
+                                        </div>
+                                    <?php endif;?>    
                                     <div class="mb-3 form-group">
                                         <label for="email" class="form-label">Email:</label>
                                         <input type="Email" class="form-control" name="email" placeholder="Enter your Email"  value="<?= $_COOKIE['email'] ??''?>" id="ToOpenPage" required>
@@ -114,10 +119,15 @@
                                     <button type="submit" name="submit"class="btn btn-primary w-100 fw-bold">SIGN IN</button>
                                 </form>
                             </div>
+                            <div class="text-center"> 
+                                <p class="fw-bold">
+                                create account
+                                </p>
+                                <a href="sign_up.php" class="link-light btn btn-primary w-50 mb-4">Sign up</a>
+
+                            </div>
                             <span class="text-center mb-5 mt-.5 ">forget your password ? <a href="# ">Reset password</a></span>
                         </div>
-
-                    </div>
 
                 </section>
                 
