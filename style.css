@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+:root{
+    --success-color:rgb(0, 255, 0);
+    --error-color:red;
+}
 body {
     height: 100vh;
     width: 100vw;
@@ -15,6 +19,107 @@ body {
     margin-left: 160px !important;
 }
 .form-control small {
+    visibility: hidden;
+    color: red;
+
+}
+
+.form-control small{
+visibility:visible !important;
+}
+.form-control.success input {
+color: green;
+
+}
+.form-control.error input {
+color: red;}
+ */
+/*----------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(69.66deg, #00C1FE 19.39%, #FAFFC1 96.69%);
+    font-family: Montserrat 'sans-serif';
+}
+
+.container {
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+    box-shadow: 0 2px 10 px rgb(0, 0, 0, 0, 0.3);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+form {
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: aqua;
+}
+
+.form-control.success input {
+    border-color: rgb(137, 250, 137);
+}
+
+.form-control.error input {
+    border-color: rgb(189, 75, 75);
+}
+.text-center{
+    text-align: center;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+.text-center a {
+    cursor: pointer;
+    width: 50%;
+    background-color: #3498db;
+    border: 2px solid rgb(108, 108, 216);
+    border-radius: 4px;
+    color: aliceblue;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-control small {
     color: red;
     position: absolute;
     bottom: 0;
@@ -22,13 +127,19 @@ body {
     visibility: hidden;
 }
 
-.form-control small{
-visibility: visible;
-}
-.form-control.success input {
-    border-color: rgb(137, 250, 137);
-}
-.form-control.error input {
-    border-color: rgb(189, 75, 75);
+.form-control.error small {
+    visibility: visible;
 }
 
+form button {
+    cursor: pointer;
+    width: 100%;
+    background-color: #3498db;
+    border: 2px solid rgb(108, 108, 216);
+    border-radius: 4px;
+    color: aliceblue;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+}
