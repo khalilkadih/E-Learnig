@@ -1,5 +1,5 @@
 <?php 
-require 'connection.php';
+require_once 'connection.php';
 try{
 
   $NameCours=$_POST['name_course'];
