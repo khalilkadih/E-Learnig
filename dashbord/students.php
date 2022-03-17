@@ -9,10 +9,11 @@
             );
         }catch (Exception $e){die ('erreur : '.$e->getMessage());}
 
-        $sqlQuery='SELECT * FROM students';
-        $studentStatement=$mysqlConnection->prepare($sqlQuery);
-        $studentStatement->execute();
-        $student=$studentStatement->fetchAll();
+            $sqlQuery='SELECT * FROM students';
+            $studentStatement=$mysqlConnection->prepare($sqlQuery);
+            $studentStatement->execute();
+            $student=$studentStatement->fetchAll();
+            
         ?>
 
         <!DOCTYPE html>
