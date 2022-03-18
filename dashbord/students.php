@@ -123,31 +123,31 @@
                                                     <form action="UpdateStudent.php" method="POST">
 
                                                         <div class="modal-body">
-
-                                                            <input type="hidden" name="id" id="id">
+                                                            
+                                                            <input type="hidden" name="id" class="id"/>
 
                                                             <div class="form-group">
                                                                 <label for="Name" class="form-label">Name:</label>
                                                                 <input type="text" name="Name" class="form-control"
-                                                                    id="Name">
+                                                                    class="Name">
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label for="Email" class="form-label">Email</label>
                                                                 <input type="text" class="form-control" name="Email"
-                                                                    id="Email">
+                                                                    class="Email">
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="phone" class="form-label">Phone</label>
                                                                 <input type="text" class="form-control" name="phone"
-                                                                    id="phone">
+                                                                    class="phone">
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label for="Enroll_Number" class="form-label">Enroll
                                                                     Number</label>
                                                                 <input type="text" class="form-control"
-                                                                    name="Enroll_Number" id="Enroll_Number">
+                                                                    name="Enroll_Number" class="Enroll_Number">
                                                             </div>
 
                                                             <div class="form-group">
@@ -252,7 +252,7 @@
                                      ?>
                                     <tr>
                                         <!-- <th scope="row"><img src="../img/user.svg" alt=""></th> -->
-                                        <td><?=$__students['id_Students']?></td>
+                                        <td style='display:none'><?=$__students['id_Students']?></td>
                                         <td><?=$__students['Name']?></td>
                                         <td><?php echo $__students['Email'];?></td>
                                         <td><?php echo $__students['phone'];?></td>
@@ -300,21 +300,17 @@
 
                                 $('.deletebtn').on('click', function () 
                                 {
-
                                      $('#deletemodal').modal('show');
 
                                      $tr = $(this).closest('tr');
-
-                                     var data = $tr.children("td").map(function(){
+                                     let data = $tr.children("td").map(function(){
                                                       return $(this).text();
+                                    }).get();
 
 
+                                    console.log(data);
 
-                                                }).get();
-
-                                                 console.log(data);
-
-                                                 $('#id').val(data[0]);
+                                    $('#id').val(data[0]);
 
                             });
                         });
@@ -332,26 +328,39 @@
             //             //show modal
             //         })
             // })
+    
             $(document).ready(function() {
 
+    
                 $('.editbtn').on('click', function() {
 
                     $('#editmodal').modal('show');
 
-                    $tr = $(this).closest('tr');
+                    /*$tr = $(this).closest('tr');
 
-                    var data = $tr.children("td").map(function() {
+                    let data = $tr.children("td").map(function() {
                         return $(this).text();
                     }).get();
-
+                    
                     console.log(data);
+                    */
+                    /////////////////////////
+            
+                    let children=$(this).closest('tr').children();
+                    let id=children[0].textContent;
+                    let name=children[1].textContent;
+                    let email=children[2].textContent;
+                    let phone=children[3].textContent;
+                    let enrollNbr=children[4].textContent;
+                    let dateAdmission=children[5].textContent;
 
-                    // $('#id').val(data[0]);
-                    $('#Name').val(data[0]);
-                    $('#Email').val(data[1]);
-                    $('#phone').val(data[2]);
-                    $('#Enroll_Number').val(data[3]);
-                    $('#Date_d_admission').val(data[4]);
+                    $('#editmodal #id').value=id;
+                    $('#editmodal #Name').value=name;
+                    $('#editmodal #Email').value=email;
+                    $('#editmodal #phone').value=phone;
+                    $('#editmodal #Enroll_Number').value=enrollNbr;
+                    $('#editmodal #Date_d_admission').value=dateAdmission;
+                   
                 });
             });
             </script>
