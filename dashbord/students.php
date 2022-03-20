@@ -128,33 +128,33 @@
 
                                                             <div class="form-group">
                                                                 <label for="Name" class="form-label">Name:</label>
-                                                                <input type="text" name="Name" class="form-control"
-                                                                    class="Name">
+                                                                <input type="text" name="Name" class=" Name form-control"
+                                                                    >
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label for="Email" class="form-label">Email</label>
-                                                                <input type="text" class="form-control" name="Email"
-                                                                    class="Email">
+                                                                <input type="text" class="form-control Email" name="Email"
+                                                                    >
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="phone" class="form-label">Phone</label>
-                                                                <input type="text" class="form-control" name="phone"
-                                                                    class="phone">
+                                                                <input type="text" class="phone form-control" name="phone"
+                                                                    >
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label for="Enroll_Number" class="form-label">Enroll
                                                                     Number</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="Enroll_Number" class="Enroll_Number">
+                                                                <input type="text" class="Enroll_Number form-control"
+                                                                    name="Enroll_Number">
                                                             </div>
 
                                                             <div class="form-group">
                                                                 <label for="Date_d_admission" class="form-label">Date
                                                                     d'admission</label>
-                                                                <input type="text" class="form-control"
-                                                                    name="Date_d_admission" id="Date_d_admission">
+                                                                <input type="text" class="Date_d_admission form-control"
+                                                                    name="Date_d_admission" >
 
                                                             </div>
 
@@ -295,7 +295,7 @@
             <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 
             <script>
-
+                     var dt;
                          $(document).ready(function(){
 
                                 $('.deletebtn').on('click', function () 
@@ -305,13 +305,13 @@
                                      $tr = $(this).closest('tr');
                                      let data = $tr.children("td").map(function(){
                                                       return $(this).text();
-                                    }).get();
-
+                                }).get();
+                            dt=data;        
 
                                     console.log(data);
 
                                     $('#id').val(data[0]);
-
+                                    
                             });
                         });
 
@@ -354,12 +354,12 @@
                     let enrollNbr=children[4].textContent;
                     let dateAdmission=children[5].textContent;
 
-                    $('#editmodal #id').value=id;
-                    $('#editmodal #Name').value=name;
-                    $('#editmodal #Email').value=email;
-                    $('#editmodal #phone').value=phone;
-                    $('#editmodal #Enroll_Number').value=enrollNbr;
-                    $('#editmodal #Date_d_admission').value=dateAdmission;
+                    $('#editmodal .id')[0].value=id;
+                    $('#editmodal .Name')[0].value=name;
+                    $('#editmodal .Email')[0].value=email;
+                    $('#editmodal .phone')[0].value=phone;
+                    $('#editmodal .Enroll_Number')[0].value=enrollNbr;
+                    $('#editmodal .Date_d_admission')[0].value=dateAdmission;
                    
                 });
             });
