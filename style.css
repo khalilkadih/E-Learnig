@@ -55,7 +55,7 @@ body {
     background-color: rgb(245, 245, 245);
     border-radius: 5px;
     box-shadow: 0 2px 10 px rgb(0, 0, 0, 0, 0.3);
-    width: 400px;
+    width:550px;
 }
 
 h2 {
@@ -103,9 +103,10 @@ form {
 .text-center{
     text-align: center;
     display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .text-center a {
     cursor: pointer;
     width: 50%;

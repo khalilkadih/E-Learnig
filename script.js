@@ -23,59 +23,36 @@
         const formControl=input.parentElement;
         formControl.className='form-control success';
     }
-    function checkPassworMatch(input1 ,input2,ev){
-        if(input1.value !==input2.value){
+    function checkPassworMatch(input1 ,input2){
+        console.log("input 1");
+        console.log(input1);
+        console.log("input 2");
+        console.log(input2);
+        
+        const isPassValid=input1.value ==input2.value;
+        if(!isPassValid){
             showerror(input2,'password not Match ');
-            ev.preventDefault();
         }
+        return isPassValid;
         
     }
   
-
+    const checkIfFormIsNotEmpty=(form)=>{
+        let allValide=true;
+        form.querySelectorAll('input').forEach((input)=>{
+            if(input.value==''){
+                showerror(input,input.name+' is required');
+                allValide=false;
+            }else{
+                showSuccess(input);
+            }
+        });
+        return allValide;
+    }
 
     form.addEventListener('submit',function(e){
             
-        // e.preventDefault();
-
-            if(firstName.value==="")
-        {
-            showerror(firstName,'first Name required');
-
+            if(!checkIfFormIsNotEmpty(e.target) || !checkPassworMatch(password,password_conf))
             e.preventDefault();
-        }else{
-            showSuccess(firstName);
-        }
-        if(LastName.value==="")
-        {
-        showerror(LastName,'first Name required');
-        e.preventDefault();
-    }else{
-        showSuccess(LastName);
-    }
-    if(email.value==="")
-    {
-        showerror(email,'first Name required');
-        e.preventDefault();
-    }else{
-        showSuccess(email);
-    }
-    if(firstName.value==="")
-    {
-        showerror(password,'first Name required');
-        e.preventDefault();
-        }else{
-        showSuccess(password);
-    }
-    if(firstName.value==="")
-    {
-        showerror(password_conf,'first Name required');
-        e.preventDefault();
-
-    }else{
-        showSuccess(password_conf);
-    }
-
-    checkPassworMatch(password, password_conf,e);
-
-
+    
     })
